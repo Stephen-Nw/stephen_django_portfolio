@@ -1,0 +1,30 @@
+{% load static %}
+
+<div class="col-md-4">
+    <div class="work-box">
+        <a href="{{ project.image_one.url }}" data-gallery="portfolioGallery"
+            class="portfolio-lightbox">
+            <div class="work-img">
+                <img src="{{ project.image_one.url }}" alt="" class="img-fluid">
+                {% comment %} <img src="{%  static 'webpage/pic-uploads/cover-img.jpg' %}" alt=""> {% endcomment %}
+            </div>
+        </a>
+        <div class="work-content">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2 class="w-title">{{ project.name }}</h2>
+                    <div class="w-more">
+                        <span class="w-ctegory">{{ project.category }}</span> / <span class="w-date">{{ project.date }}
+                            </span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="w-like">
+                        <a href="{% url 'portfolio-info' project.slug %}"> <span
+                                class="bi bi-plus-circle"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

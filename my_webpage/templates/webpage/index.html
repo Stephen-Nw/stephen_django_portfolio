@@ -1,0 +1,436 @@
+{% extends 'webpage/base/base.html' %}
+
+{% load static %}
+
+
+{% block title %}
+Stephen Main
+{% endblock %}
+
+
+{% block navbar %}
+<li><a class="nav-link scrollto" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#about">About</a></li>
+                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
+                    <li><a class="nav-link scrollto " href="#work">Work</a></li>
+                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+{% endblock %}
+
+
+{% block body %}
+   <!-- ======= Hero Section ======= -->
+   <div id="hero" class="hero route bg-image" style="background-image: url('{% static "webpage/assets/img/computer-bg.jpg" %}')">
+   <div class="overlay-itro"></div>
+   <div class="hero-content display-table">
+       <div class="table-cell">
+           <div class="container">
+               <!--<p class="display-6 color-d">Hello, world!</p>-->
+               {% if send_message %}
+               <p class="hero-title mb-4"><span>Your message has been sent</span></p>
+               {% else %}
+               <h1 class="hero-title mb-4">I am Stephen Nwaukwa</h1>
+               <p class="hero-subtitle"><span class="typed"
+                       data-typed-items="Python Developer, Freelancer, Backend Developer"></span></p>
+                {% endif %}
+               <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+           </div>
+       </div>
+   </div>
+</div><!-- End Hero Section -->
+
+<main id="main">
+
+   <!-- ======= About Section ======= -->
+   <section id="about" class="about-mf sect-pt4 route">
+       <div class="container">
+           <div class="row">
+               <div class="col-sm-12">
+                   <div class="box-shadow-full">
+                       <div class="row">
+                           <div class="col-md-6">
+                               <div class="row">
+                                   <div class="col-sm-6 col-md-5">
+                                       <div class="about-img">
+                                           <img src="{% static 'webpage/assets/img/stephen_pic.jpg' %}"
+                                               class="img-fluid rounded b-shadow-a" alt="">
+                                       </div>
+                                   </div>
+                                   <div class="col-sm-6 col-md-7">
+                                       <div class="about-info">
+                                           <p><span class="title-s">Name: </span> <span>Stephen Nwaukwa</span></p>
+                                           <p><span class="title-s">Profile: </span> <span>Python
+                                                   developer</span></p>
+                                           <p><span class="title-s">Email: </span> <span>onyii.nw80@gmail.com</span>
+                                           </p>
+                                           {% comment %} <p><span class="title-s">Phone: </span> <span>(617) 557-0089</span></p> {% endcomment %}
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="skill-mf">
+                                   <p class="title-s">Skill</p>
+                                   <span>Flask</span> <span class="pull-right">75%</span>
+                                   <div class="progress">
+                                       <div class="progress-bar" role="progressbar" style="width: 75%;"
+                                           aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                   </div>
+                                   <span>Tkinter</span> <span class="pull-right">85%</span>
+                                   <div class="progress">
+                                       <div class="progress-bar" role="progressbar" style="width: 85%"
+                                           aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                   </div>
+                                   <span>API</span> <span class="pull-right">80%</span>
+                                   <div class="progress">
+                                       <div class="progress-bar" role="progressbar" style="width: 80%"
+                                           aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                   </div>
+                                   <span>Pandas</span> <span class="pull-right">50%</span>
+                                   <div class="progress">
+                                       <div class="progress-bar" role="progressbar" style="width: 50%"
+                                           aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                   </div>
+                                   <span>Django</span> <span class="pull-right">50%</span>
+                                   <div class="progress">
+                                       <div class="progress-bar" role="progressbar" style="width: 50%"
+                                           aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-6">
+                               <div class="about-me pt-4 pt-md-0">
+                                   <div class="title-box-2">
+                                       <h5 class="title-left">
+                                           About me
+                                       </h5>
+                                   </div>
+                                   <p class="lead">
+                                    Hello, my name is Stephen Nwaukwa. I am a self-taught Python developer, 
+                                    writer, and a CrossFit enthusiast. I enjoy developing programs and 
+                                    applications that serve a variety of purposes. Some applications I have 
+                                    developed are quirky and simply for my amusement while others have been to 
+                                    meet real needs for myself or people around me. 
+                                   </p>
+                                   <p class="lead">
+                                    My first foray into programming was right after I finished high school and 
+                                    was waiting for college. I grabbed a couple of books on Basic programming 
+                                    laying about the house and taught myself how to program. Using what I learned,
+                                    I wrote several mathematical programs. In college, I further pursued my love of programming 
+                                    by taking courses in Fortran and writing more programs.
+                                   </p>
+                                   <p class="lead">
+                                    After a detour of several years where I pursued a career in the healthcare industry, 
+                                    I returned to programming. Over a period of two years, I taught myself Python 
+                                    programming. Some of the modules that I have used to write some of my Python 
+                                    applications include Tkinter, Flask, Django, and Pandas, among others. 
+                                   </p>
+                                   <p class="lead">
+                                    I am a continuous learner, constantly exploring new technologies and languages. With 
+                                    technology constantly evolving, I believe it is important to stay on top on latest 
+                                    trends. Feel free to <a href="#contact"><strong>reach out</strong></a> to find out what I can do for you. 
+                                    </p>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section><!-- End About Section -->
+
+   <!-- ======= Services Section ======= -->
+   <section id="services" class="services-mf pt-5 route">
+       <div class="container">
+           <div class="row">
+               <div class="col-sm-12">
+                   <div class="title-box text-center">
+                       <h3 class="title-a">
+                           Services
+                       </h3>
+                       <p class="subtitle-a">
+                           Below is a list of some of the services that I provide
+                       </p>
+                       <div class="line-mf"></div>
+                   </div>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-md-4">
+                   <div class="service-box">
+                       <div class="service-ico">
+                           <span class="ico-circle"><i class="bi bi-briefcase"></i></span>
+                       </div>
+                       <div class="service-content">
+                           <h2 class="s-title">Web Scraping</h2>
+                           <p class="s-description text-center">
+                               With tools such as BeautifulSoup, I can perform a variety 
+                               of web scraping activities to retrive information from websites online.
+                                The information gathered will be formatted and presented in a 
+                                manner that is easily to grasp and understand. 
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-md-4">
+                   <div class="service-box">
+                       <div class="service-ico">
+                           <span class="ico-circle"><i class="bi bi-card-checklist"></i></span>
+                       </div>
+                       <div class="service-content">
+                           <h2 class="s-title">Web Development</h2>
+                           <p class="s-description text-center">
+                               Using Flask or Django for the backend framwork, and Bootstrap 5 
+                               for the front end, I can build web applications
+                                to suit both business and/or personal needs.
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-md-4">
+                   <div class="service-box">
+                       <div class="service-ico">
+                           <span class="ico-circle"><i class="bi bi-bar-chart"></i></span>
+                       </div>
+                       <div class="service-content">
+                           <h2 class="s-title">Data Analysis</h2>
+                           <p class="s-description text-center">
+                               With Python Pandas, I can manipulate and analyze data. 
+                               I can also present the data in visually appealing formats 
+                               using Matplotlib 
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               {% comment %} <div class="col-md-4">
+                   <div class="service-box">
+                       <div class="service-ico">
+                           <span class="ico-circle"><i class="bi bi-binoculars"></i></span>
+                       </div>
+                       <div class="service-content">
+                           <h2 class="s-title">Responsive Design</h2>
+                           <p class="s-description text-center">
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem
+                               fugiat! Quia,
+                               provident vitae! Magni
+                               tempora perferendis eum non provident.
+                           </p>
+                       </div>
+                   </div>
+               </div> {% endcomment %}
+               {% comment %} <div class="col-md-4">
+                   <div class="service-box">
+                       <div class="service-ico">
+                           <span class="ico-circle"><i class="bi bi-brightness-high"></i></span>
+                       </div>
+                       <div class="service-content">
+                           <h2 class="s-title">Graphic Design</h2>
+                           <p class="s-description text-center">
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem
+                               fugiat! Quia,
+                               provident vitae! Magni
+                               tempora perferendis eum non provident.
+                           </p>
+                       </div>
+                   </div>
+               </div> {% endcomment %}
+               {% comment %} <div class="col-md-4">
+                   <div class="service-box">
+                       <div class="service-ico">
+                           <span class="ico-circle"><i class="bi bi-calendar4-week"></i></span>
+                       </div>
+                       <div class="service-content">
+                           <h2 class="s-title">Marketing Services</h2>
+                           <p class="s-description text-center">
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem
+                               fugiat! Quia,
+                               provident vitae! Magni
+                               tempora perferendis eum non provident.
+                           </p>
+                       </div>
+                   </div>
+               </div> {% endcomment %}
+           </div>
+       </div>
+   </section><!-- End Services Section -->
+
+   <!-- ======= Counter Section ======= -->
+   {% comment %} <div class="section-counter paralax-mf bg-image" style="background-image: url('{% static "webpage/assets/img/counters-bg.jpg" %}')">
+       <div class="overlay-mf"></div>
+       <div class="container position-relative">
+           <div class="row">
+               <div class="col-sm-3 col-lg-3">
+                   <div class="counter-box counter-box pt-4 pt-md-0">
+                       <div class="counter-ico">
+                           <span class="ico-circle"><i class="bi bi-check"></i></span>
+                       </div>
+                       <div class="counter-num">
+                           <p data-purecounter-start="0" data-purecounter-end="450" data-purecounter-duration="1"
+                               class="counter purecounter"></p>
+                           <span class="counter-text">WORKS COMPLETED</span>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-sm-3 col-lg-3">
+                   <div class="counter-box pt-4 pt-md-0">
+                       <div class="counter-ico">
+                           <span class="ico-circle"><i class="bi bi-journal-richtext"></i></span>
+                       </div>
+                       <div class="counter-num">
+                           <p data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1"
+                               class="counter purecounter"></p>
+                           <span class="counter-text">YEARS OF EXPERIENCE</span>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-sm-3 col-lg-3">
+                   <div class="counter-box pt-4 pt-md-0">
+                       <div class="counter-ico">
+                           <span class="ico-circle"><i class="bi bi-people"></i></span>
+                       </div>
+                       <div class="counter-num">
+                           <p data-purecounter-start="0" data-purecounter-end="550" data-purecounter-duration="1"
+                               class="counter purecounter"></p>
+                           <span class="counter-text">TOTAL CLIENTS</span>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-sm-3 col-lg-3">
+                   <div class="counter-box pt-4 pt-md-0">
+                       <div class="counter-ico">
+                           <span class="ico-circle"><i class="bi bi-award"></i></span>
+                       </div>
+                       <div class="counter-num">
+                           <p data-purecounter-start="0" data-purecounter-end="48" data-purecounter-duration="1"
+                               class="counter purecounter"></p>
+                           <span class="counter-text">AWARD WON</span>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div><!-- End Counter Section --> {% endcomment %}
+
+   <!-- ======= Portfolio Section ======= -->
+   <section id="work" class="portfolio-mf sect-pt4 route" >
+       <div class="container">
+           <div class="row">
+               <div class="col-sm-12">
+                   <div class="title-box text-center">
+                       <h3 class="title-a">
+                           Portfolio
+                       </h3>
+                       <p class="subtitle-a">
+                           Listed below are samples of my completed projects. Check my <a href="https://github.com/Stephen-Nw" target="_blank"><strong>GitHub profile</strong></a> for a complete list.
+                       </p>
+                       <div class="line-mf"></div>
+                   </div>
+               </div>
+           </div>
+           <div class="row">
+
+            {% for project in projects %}
+            {% include 'webpage/includes/portfolio-item.html' %}
+            {% endfor %}
+
+          </div>
+       </div>
+   </section><!-- End Portfolio Section -->
+
+   {% comment %} <!-- ======= Testimonials Section ======= -->
+   <div class="testimonials paralax-mf bg-image" style="background-image: url('{% static "webpage/assets/img/overlay-bg.jpg" %}')">
+       <div class="overlay-mf"></div>
+       <div class="container">
+           <div class="row">
+               <div class="col-md-12">
+
+                   <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                       <div class="swiper-wrapper">
+
+                            {% for testimonial in testimonials %}
+                           <div class="swiper-slide">
+                               <div class="testimonial-box">
+                                   <div class="author-test">
+                                       <img src="{{ testimonial.image.url }}" alt=""
+                                           class="rounded-circle b-shadow-a">
+                                       <span class="author">{{ testimonial.name }}</span>
+                                   </div>
+                                   <div class="content-test">
+                                       <p class="description lead">
+                                           {{ testimonial.comment }}
+                                       </p>
+                                   </div>
+                               </div>
+                           </div>
+                           {% endfor %}<!-- End testimonial item -->
+                            </div>
+                       <div class="swiper-pagination"></div>
+                   </div>
+
+                   <!-- <div id="testimonial-mf" class="owl-carousel owl-theme">
+     
+   </div> -->
+               </div>
+           </div>
+       </div>
+   </div><!-- End Testimonials Section --> {% endcomment %}
+
+
+   <!-- ======= Contact Section ======= -->
+   <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url('{% static "webpage/assets/img/overlay-bg.jpg" %}')">
+       <div class="overlay-mf"></div>
+       <div class="container">
+           <div class="row">
+               <div class="col-sm-12">
+                   <div class="contact-mf">
+                       <div id="contact" class="box-shadow-full">
+                           <div class="row">
+                               <div class="col-md-6">
+                                   <div class="title-box-2">
+                                       <h5 class="title-left">
+                                           Contact Information
+                                       </h5>
+                                   </div>
+                                   <div>
+                                       {% include 'webpage/includes/contact-form.html' %}
+                                   </div>
+                               </div>
+                               <div class="col-md-6">
+                                   <div class="title-box-2 pt-4 pt-md-0">
+                                       <h5 class="title-left">
+                                           Get in Touch
+                                       </h5>
+                                   </div>
+                                   <div class="more-info">
+                                       <p class="lead">
+                                           Please fill out the out the contact form with your information and 
+                                           a brief description of the service required. I will reach out as soon 
+                                           as I receive your information so that we can discuss your project further.
+                                       </p>
+                                       {% comment %} <ul class="list-ico">
+                                           <li><span class="bi bi-geo-alt"></span> 329 WASHINGTON ST BOSTON, MA
+                                               02108</li>
+                                           <li><span class="bi bi-phone"></span> (617) 557-0089</li>
+                                           <li><span class="bi bi-envelope"></span> contact@example.com</li>
+                                       </ul> {% endcomment %}
+                                   </div>
+                                   <div class="socials">
+                                       <ul>
+                                           {% comment %} <li><a href=""><span class="ico-circle"><i
+                                                           class="bi bi-facebook"></i></span></a></li>
+                                           <li><a href=""><span class="ico-circle"><i
+                                                           class="bi bi-instagram"></i></span></a></li> {% endcomment %}
+                                           <li><a href="https://twitter.com/interprimos" target="_blank"><span class="ico-circle"><i
+                                                           class="bi bi-twitter"></i></span></a></li>
+                                           <li><a href="https://www.linkedin.com/in/stephen-nwaukwa-20440036" target="_blank"><span class="ico-circle"><i
+                                                           class="bi bi-linkedin"></i></span></a></li>
+                                       </ul>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+{% endblock %}
