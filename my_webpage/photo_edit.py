@@ -1,7 +1,7 @@
 # The functions take the images stored in the database and formats their sizes before displaying
 # them as either the portfolio cover image on the home page or the image on the porfolio details page.
 # urllib.request.urlretrieve is used to convert and save the url of the image to a jpeg. The saved jpeg
-# is then resized for either the home page or portfolio details page.
+# is then resized for either the home page or portfolio details page.Is this still needed?
 
 
 from PIL import Image
