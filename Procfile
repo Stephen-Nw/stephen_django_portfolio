@@ -1,1 +1,1 @@
-web: gunicorn manage:app
+web: gunicorn stephen_django_portfolio.wsgi
